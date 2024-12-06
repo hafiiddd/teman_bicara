@@ -1,0 +1,90 @@
+@media (max-width: 767.98px) {
+
+    .row {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .content-column {
+      
+      height: 85%;
+      color: rgb(5, 5, 5);
+    }
+    .logo-column {
+      background-image: url('../../Assets/Logo-Container.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #96AD66;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      height: 15%;
+    }
+    .logo-column img {
+      display: none;
+    }
+    .input-group button{
+      border: none;
+      background-color: #96AD66;
+      border-radius: 50px;
+      height: 60px;
+      width: 250px;
+      color: white;
+      box-shadow: 1px 1px 5px #424242;
+    }
+    .input-group button:hover{
+      border: none;
+      background-color: #7D944D;
+      border-radius: 50px;
+      height: 60px;
+      width: 250px;
+      color: white;
+    }
+  }
+  
+  @media (min-width: 800px) {
+    .content-column,
+    .logo-column {
+      height: 100%;
+    }
+    .content-column-login {
+      background-color: #96ad66;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      color: white;
+    }
+    .button-external-login {
+      height: 50px;
+      width: 150px;
+      margin-right: 10px;
+      color: black;
+    }
+    .button-external-login:hover{
+        color: black;
+      }
+   
+    .button-external-login:last-child {
+      height: 50px;
+      width: 150px;
+      margin-right: 0;
+    }
+    .box-area {
+      width: 100%;
+      height: 100%;
+    }
+    .link {
+      text-decoration: none;
+      color: #424242;
+    }
+    .input-group button {
+      border: none;
+      background-color: #7d944d;
+      border-radius: 50px;
+    }
+    .button-external-login,
+    .input-group input {
+      border-radius: 20px;
+    }
+  }
+  /*hehehehe*/
+  

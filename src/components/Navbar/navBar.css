@@ -1,0 +1,89 @@
+.btn-login {
+    background-color: white;
+    color: #96AD66;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    flex-shrink: 1;
+  }
+  .custom-collapse .btn{
+    background-color: white;
+    color: #96AD66;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-nav .nav-link {
+    margin: 0 10px;
+  }
+  
+  .custom-margin-right{
+    padding-left: 25rem;
+  
+  }
+  
+  .custom-collapse {
+    background-color: #96AD66; 
+    height: 10.97694840834248vh; 
+    text-align: center; 
+    transition: all 0.3s ease-in-out;  
+  }
+  
+  .custom-navbar-open{
+    height: 30.97694840834248vh; 
+    display: block;
+  }
+  .nav-item .active{
+    border-bottom: 3px solid white;
+  }
+  .nav-item .active ::after{
+    border-radius: 50px;
+  }
+  @media (max-width: 620px) {
+    .custom-margin-right{
+      padding-left: 0rem;
+    }
+    
+  }
+  /*layout*/
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  
+  }
+  
+  .layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Layout mengisi seluruh layar */
+  }
+  
+  header {
+    flex-shrink: 0;
+  }
+  
+  .content {
+    flex-grow: 1; /* Konten akan mengisi ruang yang ada */
+  
+    background-color: #f4f4f9;
+    overflow-y: auto; /* Mengaktifkan scroll jika konten lebih tinggi dari layar */
+  }
+  
+  footer {
+    flex-shrink: 0; /* Footer tetap di bawah dan tidak mempengaruhi tinggi konten */
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+  }

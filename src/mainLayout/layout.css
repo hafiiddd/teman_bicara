@@ -1,0 +1,37 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Layout mengisi seluruh layar */
+    overflow-x: hidden;
+
+  }
+  
+  header {
+    flex-shrink: 0;
+  } 
+  main.content {
+    flex-grow: 1;
+    width: 100%; /* Pastikan elemen utama mengisi lebar penuh */
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: aqua;
+  }
+  
+  header,
+  footer{
+    width: 100%; 
+    margin: 0;
+    padding: 0;/* Header dan Footer juga harus memiliki lebar penuh */
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%; /* Pastikan body juga mengisi lebar layar */
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+    
+  }
+
+  /* homePage */
+ 

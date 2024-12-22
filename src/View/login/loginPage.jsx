@@ -3,10 +3,43 @@ import logoIg from "../../assets/skill-icons_instagram.png";
 import logoGoogle from "../../assets/Apple-icon.png";
 import logo from "../../Assets/logu-green.png";
 import logoApple from "../../assets/flat-color-icons_google.png";
+import { useState } from 'react';
+import axiosClient from '../../axiosClient.js';
+import { useUser } from '../../../src/context/globalUserContext.jsx';
+import { useNavigate } from 'react-router-dom';
+
 
 function LoginPage() {
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const { loginUser } = useUser();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate();
+
+    const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+    };
+
+    const handlePasswordChange = (event) => {
+        setPassword(event.target.value);
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault(); 
+        try {
+            const response = await axiosClient.post('login', {
+                email: email,
+                password: password,
+            });
+            const { data, token } = response.data;
+
+            loginUser(data, token);
+            setErrorMessage('');
+            navigate('/');
+        } catch (error) {
+            console.log(error.response.data.message);
+            setErrorMessage(error.response.data.message);
+        }
     };
 
     return (
@@ -15,7 +48,7 @@ function LoginPage() {
                 <div className="row w-100">
                     <div className="col-md-8 p-0 d-flex align-items-center justify-content-center content-column-login">
                         <div className="row d-flex align-items-center justify-content-center">
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleSubmit} method="post">
                                 <div className="text-center mb-4">
                                     <p className="display-1 h1 fw-bolder">Sign In</p>
                                 </div>
@@ -61,6 +94,7 @@ function LoginPage() {
                                         className="form-control form-control-lg bg-light fs-6" 
                                         placeholder="Email address" 
                                         id="email" 
+                                        onChange={handleEmailChange}
                                         required 
                                     />
                                 </div>
@@ -70,6 +104,7 @@ function LoginPage() {
                                         className="form-control form-control-lg bg-light fs-6" 
                                         placeholder="Password" 
                                         id="password" 
+                                        onChange={handlePasswordChange}
                                         required 
                                     />
                                 </div>
@@ -81,7 +116,7 @@ function LoginPage() {
                                         <small>Lupa kata sandi?</small>
                                     </div>
                                 </div>
-
+                                <div>{errorMessage}</div>
                                 <div className="input-group my-3 d-flex justify-content-center mt-5">
                                     <button className="btn btn-lg fw-bold" id="button-login" type="submit">
                                         Masuk

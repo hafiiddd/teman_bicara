@@ -1,12 +1,13 @@
 import "./homePage.css";
-
+import { useUser } from '../../context/globalUserContext';
 function HomePage() {
+  const {user} = useUser();
   return (
     <>
       <div className="container-fluid homepage">
         <section className="section section-1">
           <h1>Section 1</h1>
-          <p>Welcome to the first section!</p>
+          <p>hallo {user.email}</p>
         </section>
         <section className="section section-2">
           <h1>Section 2</h1>

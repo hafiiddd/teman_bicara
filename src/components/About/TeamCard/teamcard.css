@@ -1,6 +1,6 @@
 .team-card-container {
     filter: brightness(50%);
-    transition: filter 0.3s ease; /* Smooth transition for brightness change */
+    transition: filter 0.3s ease; 
 }
 
 .team-card-container:hover {

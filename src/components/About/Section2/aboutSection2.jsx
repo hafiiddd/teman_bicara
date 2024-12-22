@@ -43,9 +43,9 @@ function Section2() {
                     Tim <span className="primary-green fw-bold">Teman Bicara</span>
                 </h2>
             </div>
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column justify-content-center">
                 <div
-                    className={`d-flex flex-md-row flex-column justify-content-center ${
+                    className={`d-flex flex-md-row flex-column justify-content-center align-items-center ${
                         isVisible ? 'animate-team' : ''
                     }`}
                     style={{ gap: '3rem' }}
@@ -61,7 +61,7 @@ function Section2() {
                     ))}
                 </div>
                 <div
-                    className={`d-flex flex-md-row flex-column justify-content-center ${
+                    className={`d-flex flex-md-row flex-column justify-content-center  align-items-center ${
                         isVisible ? 'animate-team' : ''
                     }`}
                     style={{ gap: '3rem' }}

@@ -21,7 +21,8 @@
 }
 
 .content .About .section-1 {
-  background-color: #6a9e66;
+  background-color: #fff;
+  min-height: 80vh;
 }
 
 /* .content .About .section-2 {

@@ -1,146 +1,58 @@
 [
     {
-        "title" : "Fundamental reactjs",
-        "date" : "2024-01-01",
-        "mentor" : "rehan",
-        "status" : true
+        "id": "anxiety-daily-life",
+        "title": "Understanding Anxiety and How It Affects Your Daily Life",
+        "text": "Anxiety is more than just a feeling of nervousness. It can interfere with daily activities such as work, school, and relationships. This article delves into the various forms of anxiety, from generalized anxiety disorder to panic attacks, and provides practical tips to help you manage and reduce symptoms through self-care and professional treatment options. oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo\noooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo",
+        "imgSrc": "../../Assets/cardArtikel1.png",
+        "date": "29 November 2023",
+        "author": "Dr. Cokorda"
     },
     {
-        "title" : "implemntasi state manegement pada reactjs",
-        "date" : "2024-01-02",
-        "mentor" : "narji",
-        "status" : true
+        "id": "mindfulness-stress-anxiety",
+        "title": "The Power of Mindfulness to Reduce Stress and Anxiety",
+        "text": "Mindfulness is a powerful tool to reduce stress and improve mental health. This article explores the science behind mindfulness, how it rewires the brain to handle stress better, and practical exercises you can incorporate into your daily routine to help calm your mind and improve your overall mental well-being.",
+        "imgSrc": "../../Assets/cardArtikel1.png",
+        "date": "30 November 2023",
+        "author": "Dr. Cokorda"
     },
     {
-        "title" : "Fundamental vue.js",
-        "date" : "2024-01-03",
-        "mentor" : "rusdi",
-        "status" : false
+        "id": "managing-depression",
+        "title": "Managing Depression & Finding Ways to Improve Your Wellbeing",
+        "text": "Depression is one of the most common mental health issues, and understanding it is the first step toward recovery. This article breaks down the different types of depression, signs and symptoms to look out for, and offers coping mechanisms such as therapy, medication, and lifestyle changes that can help improve your quality of life.",
+        "imgSrc": "../../Assets/cardArtikel1.png",
+        "date": "1 December 2023",
+        "author": "Dr. Cokorda"
     },
     {
-        "title" : "Fundamental reactjs",
-        "date" : "2024-01-01",
-        "mentor" : "rehan",
-        "status" : true
+        "id": "self-care-mental-wellness",
+        "title": "Self-Care for Mental Wellness: Daily Habits to Maintain Balance",
+        "text": "Self-care is essential for mental health, yet it's often neglected. This article focuses on building healthy daily habits such as maintaining a balanced diet, getting regular exercise, ensuring adequate sleep, and setting boundaries to protect your mental and emotional health. Learn how small, consistent actions can have a big impact on your overall well-being.",
+        "imgSrc": "../../Assets/cardArtikel1.png",
+        "date": "2 December 2023",
+        "author": "Dr. Cokorda"
     },
     {
-        "title" : "implemntasi state manegement pada reactjs",
-        "date" : "2024-01-02",
-        "mentor" : "narji",
-        "status" : true
+        "id": "stigma-mental-health",
+        "title": "Breaking the Stigma Around Mental Health in Modern Society",
+        "text": "Despite growing awareness, mental health stigma remains a significant barrier for those seeking help. This article explores the roots of mental health stigma, how it affects people struggling with mental illnesses, and what society can do to create a more open and accepting environment for discussing and addressing mental health issues.",
+        "imgSrc": "../../Assets/cardArtikel1.png",
+        "date": "3 December 2023",
+        "author": "Dr. Cokorda"
     },
     {
-        "title" : "Fundamental vue.js",
-        "date" : "2024-01-03",
-        "mentor" : "rusdi",
-        "status" : false
+        "id": "overcoming-burnout",
+        "title": "Overcoming Burnout: Practical Steps to Recover and Recharge",
+        "text": "Burnout is not just a state of exhaustion; it can severely impact your mental and physical health if not addressed. This article discusses the signs of burnout, its causes, and actionable steps you can take to recover, such as taking breaks, managing workload, setting clear boundaries, and seeking professional help when necessary.",
+        "imgSrc": "../../Assets/cardArtikel1.png",
+        "date": "4 December 2023",
+        "author": "Dr. Cokorda"
     },
     {
-        "title" : "Fundamental reactjs",
-        "date" : "2024-01-01",
-        "mentor" : "rehan",
-        "status" : true
-    },
-    {
-        "title" : "implemntasi state manegement pada reactjs",
-        "date" : "2024-01-02",
-        "mentor" : "narji",
-        "status" : true
-    },
-    {
-        "title" : "Fundamental vue.js",
-        "date" : "2024-01-03",
-        "mentor" : "rusdi",
-        "status" : false
-    },
-    {
-        "title" : "Fundamental reactjs",
-        "date" : "2024-01-01",
-        "mentor" : "rehan",
-        "status" : true
-    },
-    {
-        "title" : "implemntasi state manegement pada reactjs",
-        "date" : "2024-01-02",
-        "mentor" : "narji",
-        "status" : true
-    },
-    {
-        "title" : "Fundamental vue.js",
-        "date" : "2024-01-03",
-        "mentor" : "rusdi",
-        "status" : false
-    },
-    {
-        "title" : "Fundamental reactjs",
-        "date" : "2024-01-01",
-        "mentor" : "rehan",
-        "status" : true
-    },
-    {
-        "title" : "implemntasi state manegement pada reactjs",
-        "date" : "2024-01-02",
-        "mentor" : "narji",
-        "status" : true
-    },
-    {
-        "title" : "Fundamental vue.js",
-        "date" : "2024-01-03",
-        "mentor" : "rusdi",
-        "status" : false
-    },
-    {
-        "title" : "Fundamental reactjs",
-        "date" : "2024-01-01",
-        "mentor" : "rehan",
-        "status" : true
-    },
-    {
-        "title" : "implemntasi state manegement pada reactjs",
-        "date" : "2024-01-02",
-        "mentor" : "narji",
-        "status" : true
-    },
-    {
-        "title" : "Fundamental vue.js",
-        "date" : "2024-01-03",
-        "mentor" : "rusdi",
-        "status" : false
-    },
-    {
-        "title" : "Fundamental reactjs",
-        "date" : "2024-01-01",
-        "mentor" : "rehan",
-        "status" : true
-    },
-    {
-        "title" : "implemntasi state manegement pada reactjs",
-        "date" : "2024-01-02",
-        "mentor" : "narji",
-        "status" : true
-    },
-    {
-        "title" : "Fundamental vue.js",
-        "date" : "2024-01-03",
-        "mentor" : "rusdi",
-        "status" : false
-    },
-    {
-        "title" : "Fundamental reactjs",
-        "date" : "2024-01-01",
-        "mentor" : "rehan",
-        "status" : true
-    },
-    {
-        "title" : "implemntasi state manegement pada reactjs",
-        "date" : "2024-01-02",
-        "mentor" : "narji",
-        "status" : true
-    },
-    {
-        "title" : "Fundamental vue.js",
-        "date" : "2024-01-03",
-        "mentor" : "kontol ayam",
-        "status" : false
+        "id": "building-emotional-resilience",
+        "title": "Building Emotional Resilience for Handling Life's Challenges",
+        "text": "Emotional resilience is the ability to adapt to stressful situations and bounce back from hardships. This article explains why emotional resilience is important, how it can be developed through practices like mindfulness, positive thinking, and building strong social connections, and how it helps you face life's challenges with more confidence and strength.",
+        "imgSrc": "../../Assets/cardArtikel1.png",
+        "date": "5 December 2023",
+        "author": "Dr. Cokorda"
     }
 ]

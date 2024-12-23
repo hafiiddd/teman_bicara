@@ -1,7 +1,8 @@
 import logo from "../../Assets/logo-container.png";
 import playStoreIcon from "../../Assets/play-store.png";
 import appleIcon from "../../Assets/Apple-icon.png";
-import './footer.css';
+import "./footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -13,23 +14,33 @@ function Footer() {
               <img src={logo} alt="Logo" />
             </div>
             <div className="col-md-3 d-flex flex-column justify-content-center">
-              <h4>Tentang Kami</h4>
+              <h4 className="text-start">Tentang Kami</h4>
               <ul className="list-unstyled">
                 <li>Konseling</li>
-                <li>Assessment</li>
-                <li>Artikel</li>
+                <li>
+                  <Link className={"text-white"} to={"/Quiz"}>
+                    Assestment
+                  </Link>
+                </li>
+                <li>
+                  <Link className={"text-white"} to={"/artikel"}>
+                    Artikel
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="col-md-3 d-flex flex-column justify-content-center">
-              <h4>Bantuan</h4>
+              <h4 className="text-start">Bantuan</h4>
               <ul className="list-unstyled">
-                <li>Kontak</li>
-                <li>FAQ</li>
+                <li>
+                <Link className={"text-white"} to="/about?section=section-5">Kontak</Link>
+                </li>
+                <li><Link className={"text-white"} to="/about?section=section-4">FAQ</Link></li>
                 <li>Kebijakan Privasi</li>
               </ul>
             </div>
             <div className="col-md-3">
-              <h4>Aplikasi Kami</h4>
+              <h4 className="text-start">Aplikasi Kami</h4>
               <div className="d-flex">
                 <a href="#">
                   <img

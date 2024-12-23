@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from '../../components/article/cardComponent';
 import "../artikel/artikelPage.css";
@@ -19,6 +19,8 @@ function ArtikelPage() {
       .catch(err => {
         setError('Error fetching data');
         setLoading(false);
+
+        console.log(err);
       });
   }, []); 
 

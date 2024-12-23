@@ -1,4 +1,4 @@
-.btn-login {
+  li.btn-login {
     background-color: white;
     color: #96AD66;
     border-radius: 20px;
@@ -6,7 +6,16 @@
     font-weight: bold;
     text-decoration: none;
   }
-  
+  li.btn-login:hover {
+    background-color: rgb(180, 180, 180);
+    color: #96AD66;    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  li.btn-login .linkNav{
+    color: #96AD66;
+  }
   .navbar {
     position: fixed;
     top: 0;

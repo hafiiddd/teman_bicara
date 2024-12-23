@@ -1,0 +1,84 @@
+@keyframes slideLeftToRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottomToTop {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRightToLeft {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeftToRight {
+    0% {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRightToLeft {
+    0% {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.card-visible {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.card-left-to-right {
+    animation-name: slideLeftToRight;
+}
+
+.card-bottom-to-top {
+    animation-name: slideBottomToTop;
+}
+
+.card-right-to-left {
+    animation-name: slideRightToLeft;
+}
+
+.ingat-temara-1-visible {
+    animation: slideInLeftToRight 1s ease-out forwards;
+}
+
+.ingat-temara-2-visible {
+    animation: slideInRightToLeft 1s ease-out forwards;
+}

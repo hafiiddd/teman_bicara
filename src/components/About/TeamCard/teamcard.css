@@ -1,0 +1,8 @@
+.team-card-container {
+    filter: brightness(50%);
+    transition: filter 0.3s ease; 
+}
+
+.team-card-container:hover {
+    filter: brightness(100%);
+}

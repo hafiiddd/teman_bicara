@@ -3,6 +3,7 @@ import axios from 'axios';
 import Card from '../../components/article/cardComponent';
 import "../artikel/artikelPage.css";
 
+
 function ArtikelPage() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -43,6 +44,7 @@ function ArtikelPage() {
               }}
             />
           ))}
+
         </div>
       </section>
     </div>

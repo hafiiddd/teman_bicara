@@ -1,0 +1,45 @@
+.primary-green {
+    color: #7D944D;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.animate-cards .card1 {
+    opacity: 0;
+    transform: translateY(20px);
+     transition: all 0.3s ease-in-out;
+}
+
+.animate-cards .card1 {
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: calc(var(--card-index, 0) * 0.2s);
+}
+
+.animate-cards .card1:hover {
+    border: 1px solid #96AD66;
+    box-shadow: none;
+}
+
+.card1:nth-child(1) {
+    --card-index: 0;
+}
+
+.card1:nth-child(2) {
+    --card-index: 1;
+}
+
+.card1:nth-child(3) {
+    --card-index: 2;
+}

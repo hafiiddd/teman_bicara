@@ -1,40 +1,43 @@
 .content .About {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100vw;   
-    padding: 0;
-    margin: 0;
-    background-color: blue;
-    
-    /* overflow-y: auto; */
-  }
-  
-  .content .About .section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-  }
-  
-  .content .About .section-1 {
-    background-color: #6a9e66;
-  }
-  
-  .content .About  .section-2 {
-    background-color: #507e5b;
-  }
-  
-  .content .About .section-3 {
-    background-color: #3a5c47;
-  }
-  
-  .content .About  .section-4 {
-    background-color: #2a4132;
-  }
-  
-  
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-color: blue;
+
+  /* overflow-y: auto; */
+}
+
+.content .About .section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.content .About .section-1 {
+  background-color: #fff;
+  min-height: 80vh;
+}
+
+/* .content .About .section-2 {
+  background-color: #507e5b;
+} */
+
+.content .About .section-3 {
+  background-color: #fff;
+}
+
+.content .About .section-4 {
+  background-color: black;
+}
+
+.content .About .section-5 {
+  background-color: #fff;
+  min-height: 50vh;
+}

@@ -11,7 +11,7 @@ function ArtikelPage() {
 
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/v1/get-artikel')
+    axios.get('http://localhost:8000/api/v1/article')
       .then(response => {
         setArticles(response.data.data); 
         setLoading(false); 

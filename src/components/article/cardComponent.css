@@ -53,3 +53,15 @@ H5.card-title {
     padding: 0;
     box-sizing: border-box;
 }
+
+.card-content {
+    font-size: 1rem;
+    margin: 18px 18px;
+    text-align: left;
+    color: #000000;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    max-height: 4.5em;
+}

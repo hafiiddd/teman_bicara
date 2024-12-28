@@ -7,7 +7,7 @@ function HomePage() {
       <div className="container-fluid homepage">
         <section className="section section-1">
           <h1>Section 1</h1>
-          <p>hallo {user.email}</p>
+          <p>hallo</p>
         </section>
         <section className="section section-2">
           <h1>Section 2</h1>

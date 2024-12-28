@@ -1,0 +1,103 @@
+[
+    {
+      "id": 1,
+      "question": "Bagaimana perasaan Anda secara umum dalam dua minggu terakhir?",
+      "options": [
+        { "option": "a) Merasa bahagia dan penuh energi", "point": 1 },
+        { "option": "b) Netral, tidak terlalu bahagia atau sedih", "point": 2 },
+        { "option": "c) Merasa sedih atau lesu", "point": 3 },
+        { "option": "d) Sangat tertekan dan tidak bersemangat", "point": 4 }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Apakah Anda kehilangan minat atau kesenangan dalam hal-hal yang biasanya Anda nikmati?",
+      "options": [
+        { "option": "a) Tidak, saya masih menikmati aktivitas yang saya sukai", "point": 1 },
+        { "option": "b) Kadang-kadang", "point": 2 },
+        { "option": "c) Sering kehilangan minat", "point": 3 },
+        { "option": "d) Hampir selalu merasa tidak tertarik", "point": 4 }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Apakah Anda sering merasa cemas atau khawatir berlebihan tanpa alasan jelas?",
+      "options": [
+        { "option": "a) Tidak, saya jarang merasa cemas", "point": 1 },
+        { "option": "b) Kadang-kadang", "point": 2 },
+        { "option": "c) Sering merasa cemas", "point": 3 },
+        { "option": "d) Hampir selalu merasa sangat cemas", "point": 4 }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Apakah Anda sering merasa gelisah, seperti tidak bisa duduk diam?",
+      "options": [
+        { "option": "a) Tidak, saya merasa tenang", "point": 1 },
+        { "option": "b) Kadang-kadang merasa gelisah", "point": 2 },
+        { "option": "c) Sering merasa gelisah", "point": 3 },
+        { "option": "d) Hampir selalu merasa sangat gelisah", "point": 4 }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Apakah Anda mengalami masalah tidur, seperti sulit tidur atau terlalu banyak tidur?",
+      "options": [
+        { "option": "a) Tidak, tidur saya normal", "point": 1 },
+        { "option": "b) Kadang-kadang sulit tidur", "point": 2 },
+        { "option": "c) Sering sulit tidur atau tidur terlalu lama", "point": 3 },
+        { "option": "d) Hampir selalu mengalami masalah tidur", "point": 4 }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Apakah Anda merasa lelah atau kehabisan energi, meskipun tidak melakukan aktivitas berat?",
+      "options": [
+        { "option": "a) Tidak, saya merasa bugar dan berenergi", "point": 1 },
+        { "option": "b) Kadang-kadang merasa lelah", "point": 2 },
+        { "option": "c) Sering merasa sangat lelah", "point": 3 },
+        { "option": "d) Hampir selalu merasa lelah dan lesu", "point": 4 }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Apakah Anda mengalami kesulitan berkonsentrasi atau membuat keputusan sederhana?",
+      "options": [
+        { "option": "a) Tidak, saya bisa berkonsentrasi dengan baik", "point": 1 },
+        { "option": "b) Kadang-kadang mengalami kesulitan", "point": 2 },
+        { "option": "c) Sering merasa sulit berkonsentrasi", "point": 3 },
+        { "option": "d) Hampir selalu mengalami kesulitan fokus", "point": 4 }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Apakah Anda pernah berpikir untuk menyakiti diri sendiri atau mengakhiri hidup?",
+      "options": [
+        { "option": "a) Tidak, saya tidak pernah berpikir tentang hal tersebut", "point": 1 },
+        { "option": "b) Pernah berpikir, tapi tidak serius", "point": 2 },
+        { "option": "c) Sering muncul di pikiran", "point": 3 },
+        { "option": "d) Hampir setiap hari muncul pikiran untuk melakukannya", "point": 4 }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Apakah Anda mengalami perubahan nafsu makan (makan terlalu banyak atau terlalu sedikit)?",
+      "options": [
+        { "option": "a) Tidak, nafsu makan saya stabil", "point": 1 },
+        { "option": "b) Kadang-kadang mengalami perubahan nafsu makan", "point": 2 },
+        { "option": "c) Sering mengalami perubahan yang signifikan", "point": 3 },
+        { "option": "d) Hampir selalu mengalami perubahan besar dalam pola makan", "point": 4 }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Apakah Anda mengalami penurunan berat badan atau peningkatan berat badan secara tiba-tiba tanpa sebab jelas?",
+      "options": [
+        { "option": "a) Tidak ada perubahan berat badan", "point": 1 },
+        { "option": "b) Penurunan atau peningkatan sedikit", "point": 2 },
+        { "option": "c) Perubahan signifikan dalam berat badan", "point": 3 },
+        { "option": "d) Perubahan sangat signifikan dan mengkhawatirkan", "point": 4 }
+      ]
+    }
+  ]
+  

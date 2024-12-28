@@ -6,6 +6,8 @@ import AboutPage from "../View/about/aboutPage";
 import LoginPage from "../View/login/loginPage";
 import RegisterPage from "../View/register/registerPage";
 import Layout from "../mainLayout/mainLayout"
+import QuizSoal from "../View/quiz/quizSoal";
+import ResultPage from "../View/quiz/resultPage";
 
 // import "./navBar.css";
 export const router = createBrowserRouter([
@@ -16,6 +18,8 @@ export const router = createBrowserRouter([
         { index : true, element: <HomePageView /> },
         { path: "/Artikel", element: <ArtikelPage /> },
         { path: "/Quiz", element: <QuizPage /> },
+        { path: "/Soal", element: <QuizSoal />},
+        { path: "/Result", element: <ResultPage /> },
         { path: "/About", element: <AboutPage /> },
       ],
     },

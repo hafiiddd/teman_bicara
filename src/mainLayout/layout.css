@@ -13,7 +13,7 @@
     flex-grow: 1;
     width: 100%; /* Pastikan elemen utama mengisi lebar penuh */
     padding: 0;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
   

@@ -10,7 +10,7 @@ function ArtikelDetailPage() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/v1/get-artikel/${id}`)
+        axios.get(`http://localhost:8000/api/v1/article/${id}`)
             .then(response => {
                 setArticle(response.data.data);
                 setLoading(false);
@@ -49,7 +49,7 @@ function ArtikelDetailPage() {
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <img src={image || 'default-image.jpg'} alt="Article" className="article-image" id="article-image" />
+                            <img src={"../../../../src/assets/" + image || 'default-image.jpg'} alt="Article" className="article-image" id="article-image" />
                         </div>
                     </div>
                 </div>

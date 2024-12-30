@@ -87,7 +87,7 @@ function HomePage() {
 
 
   return (
-    <div className="container-fluid homepage">
+        <div className="container-fluid homepage">
       <section className="section section-1">
         <h1>Section 1</h1>
         <p>{user ? `Hallo ${user.email}` : isLogin}</p>

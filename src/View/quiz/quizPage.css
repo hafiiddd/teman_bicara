@@ -1,40 +1,53 @@
 .content .Quiz {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100vw;   
-    padding: 0;
-    margin: 0;
-    background-color: blue;
-    
-    /* overflow-y: auto; */
-  }
-  
-  .content .Quiz .section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-  }
-  
-  .content .Quiz .section-1 {
-    background-color: #6a9e66;
-  }
-  
-  /* .content .Artikel  .section-2 {
-    background-color: #507e5b;
-  }
-  
-  .content .Artikel .section-3 {
-    background-color: #3a5c47;
-  }
-  
-  .content .Artikel  .section-4 {
-    background-color: #2a4132;
-  } */
-  
-  
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-color: blue;
+}
+
+.content .Quiz .section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.content .Quiz .section-1 {
+  background-color: white;
+}
+
+a.btn-quiz {
+  width: 300px;
+  height: 50px;
+  border-radius: 7px;
+  background-color: #afc67f;
+  color: white;
+  border: none;
+  padding-top: 12px;
+}
+
+a.btn-quiz:hover {
+  background-color: #96ad66;
+  color: white;
+}
+
+#next-btn,
+#prev-btn {
+  background-color: white;
+  border: 3px solid #96ad66;
+  text-decoration: none;
+  font-family: "poppins";
+  font-size: 500;
+  color: #96ad66;
+}
+
+.submit-quiz.btn-submit:hover {
+  background-color: #96ad66;
+  color: white;
+}

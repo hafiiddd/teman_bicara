@@ -1,7 +1,7 @@
 import Data from "./dataBlog.json"
 import { useState } from "react";
 import "./index.css"
-import Article from "./components/article"
+import Article from "./components/articlecobacoba"
 import Search from "./components/searchUtility"
 function HomePage() {
     const[dataBlog, setDataBlog] = useState(Data);
@@ -12,7 +12,6 @@ function HomePage() {
         console.log(filter.length);
         setTotalData(filter.length)
     }
-
     return (
         <>
             <h1> Simple Blog</h1>

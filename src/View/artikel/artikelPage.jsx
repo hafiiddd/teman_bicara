@@ -1,15 +1,56 @@
+import  { useEffect, useState } from 'react';
+import axios from 'axios';
+import Card from '../../components/article/cardComponent';
 import "../artikel/artikelPage.css";
-function ArtikelPage() {  
-    return (
-      <>
-        <div className="Artikel">
-          <section className="section section-1">
-            <h1>Section 1</h1>
-            <p>Welcome to the first section!</p>
-          </section>
-       
-        </div>
-      </>
-    );
+
+
+function ArtikelPage() {
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/api/v1/article')
+      .then(response => {
+        setArticles(response.data.data); 
+        setLoading(false); 
+      })
+      .catch(err => {
+        setError('Error fetching data');
+        setLoading(false);
+
+        console.log(err);
+      });
+  }, []); 
+
+  if (loading) {
+    return <div>Loading...</div>;
   }
-  export default ArtikelPage;
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  return (
+    <div className="Artikel">
+      <section className="section section-1">
+        <div className="row">
+          {articles.map((article) => (
+            <Card
+              key={article.artikel_id}
+              cardData={{
+                id: article.artikel_id,
+                title: article.title,
+                imgSrc: article.image, 
+              }}
+            />
+          ))}
+
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default ArtikelPage;

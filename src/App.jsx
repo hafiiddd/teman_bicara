@@ -3,6 +3,7 @@ import { UserProvider } from './context/globalUserContext.jsx';
 import { router } from '../src/routing/router.jsx';
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import {HomePage} from './index.jsx';
 
 function App() {
   return (

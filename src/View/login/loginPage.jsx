@@ -25,22 +25,31 @@ function LoginPage() {
     };
 
     const handleSubmit = async (event) => {
-        event.preventDefault(); 
+        event.preventDefault();
         try {
             const response = await axiosClient.post('login', {
                 email: email,
                 password: password,
             });
-            const { data, token } = response.data;
-
-            loginUser(data, token);
-            setErrorMessage('');
-            navigate('/');
+    
+            if (response.status === 200 && response.data.token) {
+                const { data, token } = response.data;
+                loginUser(data, token);
+                setErrorMessage('');
+                navigate('/'); 
+            } else {
+                throw new Error('Login gagal, silakan periksa kembali email dan password Anda');
+            }
         } catch (error) {
-            console.log(error.response.data.message);
-            setErrorMessage(error.response.data.message);
+            const errorMessage = error.response?.data?.message || error.message || 'Terjadi kesalahan saat login.';
+            setErrorMessage(errorMessage);
+            console.error(error);
         }
     };
+    
+
+    
+    
 
     return (
         <>
@@ -116,12 +125,13 @@ function LoginPage() {
                                         <small>Lupa kata sandi?</small>
                                     </div>
                                 </div>
-                                <div>{errorMessage}</div>
-                                <div className="input-group my-3 d-flex justify-content-center mt-5">
+                              
+                                <div className="input-group my-3 d-flex justify-content-center mt-3">
                                     <button className="btn btn-lg fw-bold" id="button-login" type="submit">
                                         Masuk
                                     </button>
                                 </div>
+                                <div><small className="text-danger fw-bold">{errorMessage}</small></div>
                                 <div className="input-group mt-5 d-flex justify-content-center">
                                     <small>
                                         Belum punya akun? 

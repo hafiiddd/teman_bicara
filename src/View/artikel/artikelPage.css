@@ -13,6 +13,7 @@
   .content .Artikel .section {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     min-height: 100vh;
     color: white;
@@ -21,7 +22,7 @@
   }
   
   .content .Artikel .section-1 {
-    background-color: #6a9e66;
+    background-color: #ffffff;
   }
   
   /* .card-grid {

@@ -20,8 +20,6 @@ function HomePage() {
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = articles.slice(indexOfFirstItem, indexOfLastItem);
 
-  const totalPages = Math.ceil(articles.length / itemsPerPage);
-
 
 
   useEffect(() => {
@@ -79,10 +77,6 @@ function HomePage() {
       });
   }, []);
 
-  const handlePageChange = (newPage) => {
-    setCurrentPage(newPage);
-  };
-
 
 
 
@@ -107,7 +101,7 @@ function HomePage() {
           ) : (
             <>
               <div className="row">
-                {currentItems.map((article) => (
+                {currentItems.slice(0,6).map((article) => (
                   <Card
                     key={article.artikel_id}
                     cardData={{
@@ -117,18 +111,6 @@ function HomePage() {
                       imgSrc: article.image,
                     }}
                   />
-                ))}
-              </div>
-              <div className="pagination mt-4 d-flex justify-content-center">
-                {Array.from({ length: totalPages }, (_, index) => (
-                  <button
-                    key={index}
-                    className={`btn mx-1 ${currentPage === index + 1 ? "btn-primary active-page" : "btn-secondary"
-                      }`}
-                    onClick={() => handlePageChange(index + 1)}
-                  >
-                    {index + 1}
-                  </button>
                 ))}
               </div>
             </>

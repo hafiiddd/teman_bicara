@@ -89,9 +89,12 @@
   scale: 1.2;
 }
 
-.img-item {
-  scale: 0.95;
+.img-item:nth-child(odd) {
   animation: slideRightToLeft 1s ease-out forwards;
+}
+
+.img-item:nth-child(even) {
+  animation: slideLeftToRight 1s ease-out forwards;
 }
 
 

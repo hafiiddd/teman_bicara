@@ -15,6 +15,7 @@ function HomePage() {
   const [error, setError] = useState("");
   const sectionRef = useRef(null);
   const imgRef = useRef(null);
+  const featRef = useRef(null);
   const itemsPerPage = 6;
 
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -50,6 +51,9 @@ function HomePage() {
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
+    if (featRef.current) {
+      observer.observe(imgRef.current);
+    }
 
 
 
@@ -60,7 +64,9 @@ function HomePage() {
       if (imgRef.current) {
         observer.unobserve(imgRef.current);
       }
-
+      if (featRef.current) {
+        observer.unobserve(imgRef.current);
+      }
     };
   }, []);
 
@@ -107,10 +113,10 @@ function HomePage() {
         </div>
 
       </section >
-      <section className="section section-2">
+      <section className="section section-2" >
         <div className="sec2-wrapper container-fluid">
           <h2 className="sec2-title mb-5">Main Feature</h2>
-          <div className="img-container">
+          <div className="img-container" key={Math.random()}>
             <img src="src\assets\chatbot.png" alt="chatbot" className="img-item" />
             <img src="src\assets\emotionjournaling.png" alt="emotion journaling" className="img-item" />
             <img src="src\assets\mentaltrack.png" alt="mental tracking" className="img-item" />

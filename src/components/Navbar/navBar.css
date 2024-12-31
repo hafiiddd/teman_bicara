@@ -85,7 +85,6 @@
   
   .content {
     flex-grow: 1; /* Konten akan mengisi ruang yang ada */
-  
     background-color: #f4f4f9;
     overflow-y: auto; /* Mengaktifkan scroll jika konten lebih tinggi dari layar */
   }

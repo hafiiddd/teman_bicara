@@ -108,8 +108,15 @@ function HomePage() {
 
       </section >
       <section className="section section-2">
-        <h1>Section 2</h1>
-        <p>This is the second section.</p>
+        <div className="sec2-wrapper container-fluid">
+          <h2 className="sec2-title mb-5">Main Feature</h2>
+          <div className="img-container">
+            <img src="src\assets\chatbot.png" alt="chatbot" className="img-item" />
+            <img src="src\assets\emotionjournaling.png" alt="emotion journaling" className="img-item" />
+            <img src="src\assets\mentaltrack.png" alt="mental tracking" className="img-item" />
+            <img src="src\assets\expertconsult.png" alt="expert consultation" className="img-item" />
+          </div>
+        </div>
       </section>
 
       <section className="section-3 py-5">

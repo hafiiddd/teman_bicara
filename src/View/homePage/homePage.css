@@ -28,7 +28,7 @@
 }
 
 .content .homepage .section-2 {
-  background-color: #507e5b;
+ background-color: #35383F;
 }
 
 /* sec 1 */
@@ -40,6 +40,10 @@
   font-size: 1.75rem;
   border-radius: 2rem;
   border: none;
+}
+
+.sec-1-button:hover {
+  background-color: #35383F;
 }
 
 .sec1-1-wrapper {
@@ -75,6 +79,23 @@
 }
 /* ==== */
 
+
+/* section 2 */
+.sec2-title {
+  font-size: 3.75rem;
+}
+
+.img-item:hover {
+  scale: 1.2;
+}
+
+.img-item {
+  scale: 0.95;
+  animation: slideRightToLeft 1s ease-out forwards;
+}
+
+
+/* ==== */
 
 .content .homepage .section-3 {
   background-color: white;

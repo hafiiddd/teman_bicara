@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import "./homePage.css";
 import axios from 'axios';
 import Card from '../../components/article/cardComponent';

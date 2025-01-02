@@ -1,154 +1,192 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+import { useEffect, useState } from "react";
 import Soal from "../../components/quiz/soal";
-import data from "../../components/quiz/dataSoal.json";
 import No from "../../components/quiz/numberSoal";
 import "../quiz/quizPage.css";
+import axios from "axios";
+import { useUser } from "../../context/globalUserContext";
+import { useNavigate } from 'react-router-dom';
 
 export default function QuizSoal() {
-  const [dataSoal, setDataSoal] = useState(data);
+  const navigate = useNavigate();
+   const {user } = useUser();
+  const [dataSoal, setDataSoal] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
-  const [totalPoints, setTotalPoints] = useState(0);
-  const [answers, setAnswers] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  useEffect(() => {
+    const token = localStorage.getItem("TOKEN");
+    if (!token) {
+      setError("Token tidak ditemukan");
+      setLoading(false);
+      return;
+    }
+
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const soalResponse = await axios.get(
+          "http://127.0.0.1:8000/api/v1/Quiz",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
+        setDataSoal(soalResponse.data.data);
+        setLoading(false);
+      } catch (err) {
+        setError("Error fetching data");
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const getTotalPoints = () => {
+    const quizAnswers = JSON.parse(localStorage.getItem('quizAnswers')) || {};
+    if (typeof quizAnswers !== 'object' || quizAnswers === null) {
+      console.error("Data quizAnswers tidak valid.");
+      return 0;
+    }
+    const answers = Object.values(quizAnswers);
+    const totalPoints = answers.reduce((acc, answer) => acc + answer.points, 0);
+    return totalPoints;
+  };
+
+  const submit = async() =>{
+    const totalPoints = getTotalPoints();
+    const userId = user.id; 
+    
+    const data = {
+      user_id: userId,
+      user_point: totalPoints,
+    };
+  
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/v1/storeAnswer", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json();
+      console.log('Hasil berhasil dikirim:', result);
+      localStorage.removeItem('quizAnswers');
+      console.log("Local storage 'quizAnswers' dihapus");
+      navigate('/Result'); 
+    } catch (error) {
+      console.error('Gagal mengirim hasil:', error);
+    }
+  }
+  
   const handleSelect = (id, option, points) => {
-    setAnswers((prevAnswers) => {
-      const updatedAnswers = {
-        ...prevAnswers,
-        [id]: { option, points },
-      };
-
-      const newTotalPoints = Object.values(updatedAnswers).reduce(
-        (sum, answer) => sum + (answer.points || 0),
-        0
-      );
-
-      setTotalPoints(newTotalPoints);
-      return updatedAnswers;
-    });
-
-    handleAnswered(id);
+    const newAnswers = { ...selectedAnswers, [id]: { option, points } };
+    setSelectedAnswers(newAnswers);
+    localStorage.setItem("quizAnswers", JSON.stringify(newAnswers));
   };
-
-  const handleAnswered = (id) => {
-    setSelectedAnswers((selected) => ({
-      ...selected,
-      [id]: true,
-    }));
-  };
+  
 
   const nextQuestion = () => {
     if (currentIndex < dataSoal.length - 1) {
       setCurrentIndex(currentIndex + 1);
     }
   };
+
   const prevQuestion = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     }
   };
+
   const handleSelectQuestion = (id) => {
     const index = dataSoal.findIndex((soal) => soal.id === id);
     if (index !== -1) {
       setCurrentIndex(index);
     }
   };
-  return (
-    <>
-      <div className="QuizSoal">
-        <section className="section section-1">
-          <div className="d-flex flex-row justify-content-between">
-            <div className="d-flex flex-column p-5 align-content-start">
-              <div
-                className="px-0 d-flex flex-row"
-                style={{ fontFamily: "poppins", textAlign: "start" }}
-              >
-                <h3 className="fw-bold me-2">Pertanyaan :</h3>
-                <h3 className="counting">{currentIndex + 1}</h3>
-              </div>
-              <div>
-                <Soal
-                  question={data[currentIndex].question}
-                  options={data[currentIndex].options}
-                  id={data[currentIndex].id}
-                  selectedAnswers={answers[data[currentIndex].id]}
-                  onSelect={handleSelect}
-                />
-                <div className="px-0">
-                  <div className=" d-flex flex-row justify-content-between px-3 my-3">
-                    <button
-                      className="rounded-2 d-inline-flex align-items-center "
-                      id="prev-btn"
-                      onClick={prevQuestion}
-                      disabled={currentIndex === 0}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                        width="16"
-                        height="16"
-                      >
-                        <path d="M9.78 12.78a.75.75 0 0 1-1.06 0L4.47 8.53a.75.75 0 0 1 0-1.06l4.25-4.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L6.06 8l3.72 3.72a.75.75 0 0 1 0 1.06Z"></path>
-                      </svg>
-                      <span>Sebelumnya</span>
-                    </button>
 
-                    <button
-                      className="rounded-2 d-inline-flex justify-content-end align-items-center "
-                      id="next-btn"
-                      onClick={nextQuestion}
-                      disabled={currentIndex === dataSoal.length - 1}
-                    >
-                      <span>Selanjutnya</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                        height="16"
-                        style={{ color: "#35383f" }}
-                      >
-                        <path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L9.94 8 6.22 4.28a.75.75 0 0 1 0-1.06Z"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  return (
+    
+    <div className="QuizSoal">
+      {dataSoal.map((data,index)=>(console.log(data,index)))}
+      <section className="section section-1">
+        <div className="d-flex flex-row justify-content-between">
+          <div className="d-flex flex-column p-5 align-content-start">
+            <div
+              className="px-0 d-flex flex-row"
+              style={{ fontFamily: "poppins", textAlign: "start" }}
+            >
+              <h3 className="fw-bold me-2">Pertanyaan :</h3>
+              <h3 className="counting">{currentIndex + 1}</h3>
             </div>
-            <div className="d-flex flex-column">
-              <div
-                className="d-flex flex-column my-3"
-                style={{ width: "300px" }}
-              >
-                <div className="d-flex row">
-                  {data.map((data) => (
-                    <No
-                      id={data.id}
-                      key={data.id}
-                      isSelect={
-                        currentIndex + 1 === data.id || selectedAnswers[data.id]
-                      }
-                      onSelect={(id) => {
-                        handleSelectQuestion(id);
-                      }}
-                    />
-                  ))}
-                </div>
-              </div>
-              <div className="justify-content-center submit-quiz">
-                {/* <button
-                  className="btn-submit"
-                  style={{ color: "white", background: "#7d944d" }}
-                  formAction="/Result"
+            <Soal
+              question={dataSoal[currentIndex].question}
+              options={dataSoal[currentIndex].answers}
+              id={dataSoal[currentIndex].quiz_id} 
+              selectedAnswers={selectedAnswers[dataSoal[currentIndex].quiz_id]} 
+              onSelect={handleSelect}
+            />
+            <div className="px-0">
+              <div className=" d-flex flex-row justify-content-between px-3 my-3">
+                <button
+                  className="rounded-2 d-inline-flex align-items-center "
+                  id="prev-btn"
+                  onClick={prevQuestion}
+                  disabled={currentIndex === 0}
                 >
-                  Selesai
-                </button> */}
-                <a href="/Result" className="btn " style={{ color: "white", background: "#7d944d" }}>
-                      Selesai
-                </a>
+                  Sebelumnya
+                </button>
+                <button
+                  className="rounded-2 d-inline-flex justify-content-end align-items-center "
+                  id="next-btn"
+                  onClick={nextQuestion}
+                  disabled={currentIndex === dataSoal.length - 1}
+                >
+                  Selanjutnya
+                </button>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+          <div className="d-flex flex-column">
+            <div className="d-flex flex-column my-3" style={{ width: "300px" }}>
+              <div className="d-flex row">
+                {dataSoal.map((data) => (
+                  <No
+                    id={data.quiz_id}
+                    key={data.quiz_id}
+                    isSelect={currentIndex + 1 === data.quiz_id}
+                    onSelect={(id) => {
+                      handleSelectQuestion(id);
+                    }}
+                    isAnswered={selectedAnswers[data.quiz_id]}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="justify-content-center submit-quiz">
+              <a
+                // href="/Result"
+                className="btn"
+                style={{ color: "white", background: "#7d944d" }}
+                onClick={submit}
+              >
+                Selesai
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

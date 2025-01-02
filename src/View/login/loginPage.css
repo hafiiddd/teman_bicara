@@ -1,15 +1,15 @@
 @media (max-width: 767.98px) {
 
-    .row {
+    div.login-container {
       display: flex;
       flex-direction: column-reverse;
     }
-    .content-column {
+    .content-column-login{
       
       height: 85%;
       color: rgb(5, 5, 5);
     }
-    .logo-column {
+    .logo-column-login{
       background-image: url('../../Assets/Logo-Container.png');
       background-position: center;
       background-repeat: no-repeat;
@@ -18,7 +18,7 @@
       border-bottom-right-radius: 50px;
       height: 15%;
     }
-    .logo-column img {
+    .logo-column-login img {
       display: none;
     }
     .input-group button{

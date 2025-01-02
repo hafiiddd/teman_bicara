@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
 export default function numberSoal({id, isSelect, isAnswered, onSelect}) {
   return (
     <>
       <div
+        // onClick = {()=>
+        //   console.log(isSelect,isAnswered,onSelect)
+        // }
         className={`card m-2 text-center col-auto ${
           isSelect ? "Selected" : ""
         } ${isAnswered ? "answered" : ""}`}

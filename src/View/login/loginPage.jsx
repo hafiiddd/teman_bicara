@@ -54,7 +54,7 @@ function LoginPage() {
     return (
         <>
             <div className="container-fluid min-vh-100 d-flex justify-content-center p-0">
-                <div className="row w-100">
+                <div className="row w-100 login-container">
                     <div className="col-md-8 p-0 d-flex align-items-center justify-content-center content-column-login">
                         <div className="row d-flex align-items-center justify-content-center">
                             <form onSubmit={handleSubmit} method="post">
@@ -121,9 +121,7 @@ function LoginPage() {
                                     <div>
                                         <p className="text-danger fw-bold"></p>
                                     </div>
-                                    <div className="text-end mt-2 fw-bold" style={{ color: '#424242' }}>
-                                        <small>Lupa kata sandi?</small>
-                                    </div>
+                                    
                                 </div>
                               
                                 <div className="input-group my-3 d-flex justify-content-center mt-3">
@@ -141,7 +139,7 @@ function LoginPage() {
                             </form>
                         </div>
                     </div>
-                    <div className="col-md-4 p-0 d-flex flex-column align-items-center justify-content-center logo-column">
+                    <div className="col-md-4 p-0 d-flex flex-column align-items-center justify-content-center logo-column-login">
                         <img src={logo} alt="Logo" />
                     </div>
                 </div>

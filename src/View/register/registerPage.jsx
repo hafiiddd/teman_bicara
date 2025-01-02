@@ -18,9 +18,23 @@ function RegisterPage() {
   };
 
   const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
+    const password = event.target.value;
+    const isValid = /^[A-Za-z0-9@#!$%^&*]{8,10}$/.test(password);
+    if (confirmPassword && confirmPassword !== password) {
+      setErrorMessage('Password dan Confirm Password tidak sama!');
+    }
+    if (isValid) {
+      setErrorMessage('');
+      setPassword(password);
+    } else {
+      setErrorMessage('Password harus antara 8-10 karakter dan mengandung karakter khusus @ atau #');
+    }
   };
   const handleConfirmPassChange = (event) => {
+    if (confirmPassword && confirmPassword !== password) {
+      setErrorMessage('Password dan Confirm Password tidak sama!');
+    }
+    setErrorMessage('');
     setConfirmPassword(event.target.value);
   };
 

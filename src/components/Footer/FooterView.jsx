@@ -16,7 +16,6 @@ function Footer() {
             <div className="col-md-3 d-flex flex-column justify-content-center">
               <h4 className="text-start">Tentang Kami</h4>
               <ul className="list-unstyled">
-                <li>Konseling</li>
                 <li>
                   <Link className={"text-white"} to={"/Quiz"}>
                     Assestment
@@ -36,7 +35,6 @@ function Footer() {
                 <Link className={"text-white"} to="/about?section=section-5">Kontak</Link>
                 </li>
                 <li><Link className={"text-white"} to="/about?section=section-4">FAQ</Link></li>
-                <li>Kebijakan Privasi</li>
               </ul>
             </div>
             <div className="col-md-3">

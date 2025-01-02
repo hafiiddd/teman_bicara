@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+// import React from "react";
 import "./soal.css";
 
 const Options = ({ option, isSelected, onSelect, point }) => {
@@ -42,25 +43,19 @@ export default function Soal({
   onSelect,
 }) {
   return (
-    <div>
-      <div className="p-4 rounded-2" style={{ backgroundColor: "#c8df98" }}>
-        <div className="w-100 fw-bold">
-          <h3 className="fw-bold" id="questions" style={{ fontSize: "20px" }}>
-            {question}
-          </h3>
-        </div>
-        <div>
-           {options.map((option, index) => (
-            <Options
-              key={index}
-              option={option.option}
-              point={option.point}
-              isSelected={selectedAnswers?.option === option.option} 
-              onSelect={() => onSelect(id, option.option, option.point)}
-            />
-          ))}
-        </div>
-      </div>
+    <div className="p-4 rounded-2" style={{ backgroundColor: "#c8df98" }}>
+      <h3 className="fw-bold" id="questions" style={{ fontSize: "20px" }}>
+        {question}
+      </h3>
+      {options.map((data, index) => (
+        <Options
+          key={index}
+          option={data.option}
+          point={data.point}
+          isSelected={selectedAnswers?.option === data.option}
+          onSelect={() => onSelect(id, data.option, data.point)}
+        />
+      ))}
     </div>
   );
 }

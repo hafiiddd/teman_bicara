@@ -34,6 +34,7 @@ export const UserProvider = ({ children }) => {
         setToken(null);
         localStorage.removeItem('USER');
         localStorage.removeItem('TOKEN');
+        localStorage.removeItem('quizAnswers');
     }
 
     return <UserContext.Provider value={{ user, setUser, token, setToken, loginUser, logoutUser, isSidebarOpen, setIsSidebarOpen }}>

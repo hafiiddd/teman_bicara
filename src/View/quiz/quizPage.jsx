@@ -1,6 +1,16 @@
+import { useEffect, useState } from "react";
+import { useUser } from "../../context/globalUserContext";
 import "../quiz/quizPage.css";
 
 function QuizPage() {
+  const { user } = useUser();
+    const [isLogin, setIsLogin] = useState(false);
+
+    useEffect(() => {
+      if (user != null) {
+        setIsLogin(true);
+      }
+    }, [user]);
   return (
     <>
       <div className="Quiz">
@@ -24,9 +34,11 @@ function QuizPage() {
                 </div>
                 <div className="col-4">
                   <a
+
                     className="btn btn-quiz fw-bold my-5"
-                    href="/Soal"
+                    href={isLogin ? "/Soal" : "/login"}
                   >
+
                     MULAI TES
                   </a>
                 </div>

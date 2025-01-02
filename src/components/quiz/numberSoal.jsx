@@ -26,7 +26,6 @@ export default function numberSoal({id, isSelect, isAnswered, onSelect}) {
         onClick={() => onSelect(id)}
       >
         {id}
-        <div className="card-body"></div>
       </div>
     </>
   );

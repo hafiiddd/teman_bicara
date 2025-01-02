@@ -161,9 +161,9 @@ export default function QuizSoal() {
           <div className="d-flex flex-column">
             <div className="d-flex flex-column my-3" style={{ width: "300px" }}>
               <div className="d-flex row">
-                {dataSoal.map((data) => (
+                {dataSoal.map((data,index) => (
                   <No
-                    id={data.quiz_id}
+                    id={index+1}
                     key={data.quiz_id}
                     isSelect={currentIndex + 1 === data.quiz_id}
                     onSelect={(id) => {
